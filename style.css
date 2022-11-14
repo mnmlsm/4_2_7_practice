@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0063B2FF;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.wrapper {
+    max-width: 500px;
+    height: 380px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.wrapper .search-input {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0, 0.12);
+}
+
+.search-input input {
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input .icon {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: #0063B2FF;
+    cursor: pointer;
+}
+
+.search-input .autocomplite-box {
+    padding: 0;
+    max-height: 280px;
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.search-input.active .autocomplite-box {
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.autocomplite-box li {
+    list-style: none;
+    padding: 4px 16px;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+    display: none;
+}
+
+.search-input.active .autocomplite-box li {
+    display: block;
+}
+
+.autocomplite-box li:hover {
+    background-color: #efefef;
+    border: 1px solid rgba(0, 98, 178, 0.325);
+}
+
+
+.favorite-wrapper {
+    max-width: 500px;
+    margin: 80px auto;
+}
+
+.favorite-box {
+    display: none;
+
+    position: relative;
+    flex-direction: column;
+    background-color: #9CC3D5FF;
+    opacity: 0.7;
+    border-radius: 10px;
+    transition: all ease-in-out 0.25s;
+    border: 1px solid rgb(1, 66, 118);
+}
+
+.favorite-box:hover {
+    transform: scale(1.05);
+}
+
+.favorite-box li {
+    list-style: none;
+    margin-left: 24px;
+    margin-right: 48px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.favorite-box span {
+    font-weight: normal;
+}
+
+.icon-close {
+    position: absolute;
+    top: 0;
+    right: 8px;
+    cursor: pointer;
+    color: red;
+    transition: all 0.25s;
+}
+
+.icon-close:hover {
+    color: rgba(255, 0, 0, 0.235);
+}
+
+.icon-close:active {
+    color: rgb(75, 7, 7);
+}
+
+.favorite-box.active {
+    display: flex;
+    padding: 16px 16px;
+}
